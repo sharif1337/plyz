@@ -54,8 +54,7 @@ def extract_params_from_response(response_text):
 
     # 6. JSON-style keys: "param":
     found_params.update(re.findall(r'"([a-zA-Z0-9_]+)"\s*:', response_text))
-    print(list(found_params))
-
+ 
     return list(found_params)
 
 def scan_hidden_params(url, session, wordlist, method, test_value="sharif1337"):
